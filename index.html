@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
 <!--INSERT-BASE-->
 <link rel="shortcut icon" href="favicon.ico" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset='UTF-8'/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0, ,user-scalable=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="sandbox version of gsimaps">
@@ -32,11 +32,7 @@
 <link rel="stylesheet" type="text/css" href="css/gsimaps.css"/>
 <script type="text/javascript" src="js/gsimaps.min.js"></script>
 
-<noscript>
-<div class="noscript">
-JavaScriptを有効にしてご覧ください。
-</div>
-</noscript>
+<noscript><div class="noscript">JavaScriptを有効にしてご覧ください。</div></noscript>
 
 <!-- ここから地図共有時使用 ※変更・削除しないでください -->
 
@@ -64,16 +60,12 @@ JavaScriptを有効にしてご覧ください。
 <div id="map"></div>
 <a id="footerbtn" href="javascript:void(0);"><img src="image/system/footer_up.png" width="96" height="12"></a>
 <div id="footer">
-
 	<div class="item_frame item_start"><span class="heading">住所:</span><span id="address">----</span><span class="mini_comment">（付近の住所。正確な所属を示すとは限らない。）</span></div>
 	<div class="item_frame"><span id="latlng_60">----</span></div>
 	<div class="item_frame"><span id="latlng_10">----</span>&nbsp;&nbsp;<span class="heading">ズーム:</span><span id="current_zoom"></span></div>
 	<div class="item_frame"><span class="heading">UTMポイント：</span><span id="utm_point">----</span></div>
 	<div class="item_frame"><span class="heading">標高：</span><span id="elevation">----</span></div>
 	<a class="normalbutton footer_description_btn" target="_blank" href="http://maps.gsi.go.jp/help/howtouse.html#h2-3">表示値の説明</a>
-
 </div>
-
 </body>
-
 </html>
