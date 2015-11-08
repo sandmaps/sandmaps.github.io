@@ -1,0 +1,64 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "std",
+      "title": "標準地図",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#std",
+      "html": ""
+    },
+    {
+      "type": "Layer",
+      "id": "pale",
+      "title": "淡色地図",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#pale",
+      "html": ""
+    },
+    {
+      "type": "Layer",
+      "id": "blank",
+      "title": "白地図",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#blank",
+      "html": ""
+    },
+    {
+      "type": "Layer",
+      "id": "english",
+      "title": "English",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#english",
+      "html": ""
+    },
+    {
+      "type": "Layer",
+      "id": "ort",
+      "title": "写真",
+      "iconUrl": "",
+      "url": "http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+      "subdomains": "",
+      "attribution": "",
+      "cocotile": true,
+      "legendUrl": "http://maps.gsi.go.jp/development/ichiran.html#ort",
+      "html": ""
+    }
+  ]
+}
