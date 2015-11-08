@@ -1,7 +1,7 @@
 {
-  "name": "gsimaps",
+  "name": "sandmaps",
   "version": "1.0.0",
-  "description": "The source of GSI Maps, the web maps by Geospatial Information Authority of Japan (GSI,) Japan's National Geospatial Information Authority (NGIA.)",
+  "description": "if the geeks shall inherit gsimaps.",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gsi-cyberjapan/gsimaps.git"
+    "url": "git+https://github.com/sandmaps/sandmaps.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gsi-cyberjapan/gsimaps/issues"
+    "url": "https://github.com/sandmaps/sandmaps.github.io/issues"
   },
-  "homepage": "https://github.com/gsi-cyberjapan/gsimaps#readme",
+  "homepage": "https://github.com/sandmaps/sandmaps.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
