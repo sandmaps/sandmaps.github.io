@@ -1,9 +1,5 @@
 * {
-  font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif; font-size:10.5pt;
-}
-.noscript {
-  height:64px; width:100%; position:absolute;
-  left:0px; top:0px; z-index:100000; background:#fff;
+  font-family: -apple-system,'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif; font-size:10.5pt;
 }
 strong {
   font-weight:normal;	color:#DD4827;
@@ -90,7 +86,7 @@ form {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
   text-decoration:none;
   font-size:9.5pt;
   color:#333;
@@ -110,14 +106,9 @@ form {
   background: -o-linear-gradient(#f5f5f5, #f0f0f0);
   background: -ms-linear-gradient(#f5f5f5, #f0f0f0);
   background: linear-gradient(#f5f5f5, #f0f0f0);
-
 }
-
-
-
 .normalbutton:active
 {
-
   background:#f0f0f0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #f5f5f5), color-stop(0.00, #f0f0f0));
   background: -webkit-linear-gradient(#f0f0f0, #f5f5f5);
@@ -127,12 +118,9 @@ form {
   background: linear-gradient(#f0f0f0, #f5f5f5);
   color:#666;
   box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: -1px -1px 2px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: -1px -1px 2x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
-
-
+  -moz-box-shadow: -1px -1px 2px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -1px -1px 2x 1px  rgba(0, 0, 0, 0.1);
 }
-
 .normalbutton.active
 {
   background:#f0f0f0;
@@ -142,50 +130,40 @@ form {
   background: -o-linear-gradient(#f0f0f0, #f5f5f5);
   background: -ms-linear-gradient(#f0f0f0, #f5f5f5);
   background: linear-gradient(#f0f0f0, #f5f5f5);
-
   color:#666;
   box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: -1px -1px 2px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: -1px -1px 2x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
-
-
+  -moz-box-shadow: -1px -1px 2px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -1px -1px 2x 1px  rgba(0, 0, 0, 0.1);
 }
-
 .normalbutton.disabled
 {
   color:#ccc;
   background:#fff;
   border:1px solid #ccc;
   box-shadow: none;
-  -moz-box-shadow:none; /* Firefox */
-  -webkit-box-shadow:none; /* Chrome, Safari */
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
 }
-
-
 input[type=radio].normalcheck,
 input[type=checkbox].normalcheck {
-    display: inline-block;
-    margin-right: 2px;
+  display: inline-block;
+  margin-right: 2px;
 }
 input[type=radio].normalcheck + label,
 input[type=checkbox].normalcheck + label {
-    position: relative;
-
-    display: inline-block;
-    margin-right: 8px;
-
-    font-size: 10pt;
-    line-height: 26px;
-
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 10pt;
+  line-height: 26px;
+  cursor: pointer;
 }
-
 @media (min-width: 1px) {
-    input[type=radio].normalcheck,
-    input[type=checkbox].normalcheck {
-        display: none;
-        margin: 0;
-    }
+  input[type=radio].normalcheck,
+  input[type=checkbox].normalcheck {
+    display: none;
+    margin: 0;
+  }
     input[type=radio].normalcheck + label,
     input[type=checkbox].normalcheck + label {
         padding: 0 0 0 26px;
@@ -437,20 +415,15 @@ form {
 #header #query{
   background: #fff url(../image/system/search.png) no-repeat 6px 50%;
   margin-top:1px;
-
   height:30px;
   line-height:30px;
   border: 2px solid #555;
   padding: 0px 0px 0px 28px;
   width:100%;
   *width:98%;
-
-
   -webkit-border-top-left-radius: 15px;
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
-
-
   -webkit-border-bottom-left-radius: 15px;
   -moz-border-radius-bottomleft: 15px;
   border-bottom-left-radius: 15px;

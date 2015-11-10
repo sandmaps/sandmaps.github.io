@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/sandmaps/sandmaps.github.io.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "sandmap project",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/sandmaps/sandmaps.github.io/issues"
   },
