@@ -930,9 +930,9 @@ form {
   -moz-opacity: .90;
 
   display:block;
-  background-color:#333;
+  //background-color:#dcd3b2;
   padding: 0.4em 18px;
-  color:#ffffff;
+  color:#4c493c;
   cursor: pointer;
   border:solid 1px #222;
   font-size:110%;
@@ -946,22 +946,12 @@ form {
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
   -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
-
-
 }
 
-
-.menu_btn.left{
-  left:10px;
-}
-
-.menu_btn.right{
-  right:10px;
-}
+.menu_btn.left {left:10px;}
+.menu_btn.right{right:10px;}
 
 .menu_item_frame {
-
-
   opacity: .90;
   filter: alpha(opacity=90);
   -ms-filter: "alpha(opacity=90)";
@@ -979,13 +969,11 @@ form {
   -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
   -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
   margin:0;
-
   width:180px;
   border: 1px solid #222;
   background-color:#333;
   text-align:left;
   color:#fff;
-
   z-index:15000;
 }
 
