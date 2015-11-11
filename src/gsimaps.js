@@ -487,13 +487,11 @@ jQuery.extend({
   }
 });
 
-try
-{
+try {
   window.console = window.console || {log:function(){}};
-}catch(e){}
+} catch(e){}
 
-try
-{
+try {
 window.JSON || ( window.JSON = {
   parse : function( src )
   {
@@ -505,10 +503,7 @@ window.JSON || ( window.JSON = {
     return $.stringify( obj );
   }
 });
-
-}
-catch(e)
-{}
+} catch(e) {}
 
 // ie8 array のmap, filterメソッド追加
 try

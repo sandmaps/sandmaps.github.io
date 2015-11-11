@@ -6,6 +6,6 @@ the sandmaps site. Please refer to [wiki](https://github.com/sandmaps/sandmaps.g
 $ cd sandmaps.github.io
 $ npm install
 $ npm run build
-$ npm start
 $ npm test
+$ npm start
 ```

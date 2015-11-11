@@ -347,7 +347,7 @@ form {
 
 @media print { .no_print {display: none;} }
 
-
+/*
 #topmessage {
   z-index:2;
   padding: 1px 1px 1px 1px;
@@ -356,8 +356,8 @@ form {
   position:relative;
 
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 2px 1px  rgba(0, 0, 0, 0.2); /* Firefox */
-  -webkit-box-shadow: 0px 2px 2x 1px  rgba(0, 0, 0, 0.2); /* Chrome, Safari */
+  -moz-box-shadow: 0px 2px 2px 1px  rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 2x 1px  rgba(0, 0, 0, 0.2);
 }
 
 #topmessage .message {
@@ -398,8 +398,9 @@ form {
   vertical-align:middle;
   text-align:center;
 }
+*/
 
-
+/*
 #header table {
   border-collapse: collapse;
 }
@@ -432,10 +433,10 @@ form {
   border-bottom-right-radius: 4px;
 
 
-  -moz-border-radius: 15px;/*for Firefox*/
-  -webkit-border-radius: 15px;/*for Safari and chrome*/
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
   border-radius: 15px;
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
 
   behavior: url(border-radius.htc);
   vertical-align:middle;
@@ -456,13 +457,13 @@ form {
 
 
   cursor:pointer;
-  -moz-border-radius: 3px;/*for Firefox*/
-  -webkit-border-radius: 3px;/*for Safari and chrome*/
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
 
 }
-
+*/
 
 #search_result {
   color:#fff;
