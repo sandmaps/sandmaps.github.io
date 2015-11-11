@@ -141,16 +141,15 @@ GSI.TEXT.SAKUZU.DIALOG_EDIT_POINTTEXT_HINT = '例1:動物園　\n例2:<div style
 
 // 共有の文言
 GSI.TEXT.SHARE = {};
-GSI.TEXT.SHARE.DIALOG_TITLE = '共有';
-GSI.TEXT.SHARE.DIALOG_LINK_TITLE = 'リンクを取得';
-GSI.TEXT.SHARE.DIALOG_BUILTIN_TITLE = 'ウェブサイトに埋め込む';
-GSI.TEXT.SHARE.DIALOG_SAVE_TITLE = '名前を付けて一時保存';
+GSI.TEXT.SHARE.DIALOG_TITLE = 'share';
+GSI.TEXT.SHARE.DIALOG_LINK_TITLE = 'share';
+GSI.TEXT.SHARE.DIALOG_BUILTIN_TITLE = '';
+GSI.TEXT.SHARE.DIALOG_SAVE_TITLE = '';
 
-GSI.TEXT.SHARE.DIALOG_LINK_MESSAGE = '次のURLをメール等で送付することで、現在表示されている地図を共有することができます。'+
-  '<div style="font-size:85%;">※作図結果を反映した状態で共有したい場合は、本サイトの「名前をつけて一時保存」機能をご利用下さい</div>';
-GSI.TEXT.SHARE.DIALOG_BUILTIN_MESSAGE = '次のタグをHTMLファイルに加えることで、地理院地図をウェブサイトに埋め込むことができます。';
-GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE = '次のHTMLを<string>[上記のHTMLを保存]</strong>ボタンをクリックして保存して下さい。' ;
-GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '次のHTMLをテキストエディタで<strong>文字コードUTF-8</strong>で保存して下さい。' ;
+GSI.TEXT.SHARE.DIALOG_LINK_MESSAGE = 'share';
+GSI.TEXT.SHARE.DIALOG_BUILTIN_MESSAGE = '';
+GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE = '' ;
+GSI.TEXT.SHARE.DIALOG_SAVE_MESSAGE_IE8 = '' ;
 
 GSI.TEXT.SHARE.DIALOG_TEMPLATELOADERROR = '大変申し訳ありません。しばらく経ってからご利用下さい' ;
 
@@ -183,7 +182,7 @@ CONFIG.PARAMETERNAMES = {
   JIHOKULINE  : 'jihokuline',
   LATLNGGRID  : 'latlnggrid',
   UTMGRID     : 'utmgrid',
-  MINIMAP     : 'minimap',
+  //MINIMAP     : 'minimap',
   COCOTILE    : 'cocotile',
   CLICKMOVE   : 'clickmove',
   HIGHQUALITY : 'highquality',
@@ -210,11 +209,12 @@ CONFIG.QUERYPARAMETER[ CONFIG.PARAMETERNAMES.UTMGRID ] = {
   prefix : 'u',
   settingName : 'utmGrid'
 };
-
+/*
 CONFIG.QUERYPARAMETER[ CONFIG.PARAMETERNAMES.MINIMAP ] = {
   prefix : 'm',
   settingName : 'miniMap'
 };
+*/
 
 CONFIG.QUERYPARAMETER[ CONFIG.PARAMETERNAMES.COCOTILE ] = {
   prefix : 't',
@@ -277,123 +277,27 @@ CONFIG.MAPMENU = {
   ]
 };
 
-// 「機能」メニュー構築用設定
 CONFIG.FUNCMENU = {
-  title : 'funcs',
+  title : 'tools',
   children : [
+    {id : 'share_link', title : 'share', arrow : true},
+    {id : 'measure', title : 'measure', arrow : true},
     {
-      title : '表示',
-      arrow : true,
-      childrenWidth:230,
+      title : 'link to', arrow : true, childrenWidth:160,
       children : [
         {
-          id : CONFIG.PARAMETERNAMES.CENTERCROSS,
-          title : '中心十字線',
-          typeA : 'check',
-          defaultCheck : true
+          title : 'Mapion',
+          href : 'mapion'//'http://www.mapion.co.jp/m/{y}_{x}_{z}/?wgs=1'
         },
         {
-          id : CONFIG.PARAMETERNAMES.LATLNGGRID,
-          title : '緯経度グリッド',
-          typeA : 'check',
-          defaultCheck : false
-        },
-        {
-          id : CONFIG.PARAMETERNAMES.UTMGRID,
-          title : 'UTMグリッド',
-          typeA : 'check',
-          defaultCheck : false
-        },
-        {
-          id : CONFIG.PARAMETERNAMES.JIHOKULINE,
-          title : '磁北線' + '<span class="mini_comment">（ズーム11以上）</span>',
-          typeA : 'check',
-          defaultCheck : false
-        },
-        {
-          id : CONFIG.PARAMETERNAMES.MINIMAP,
-          title : '広域図',
-          typeA : 'check',
-          defaultCheck : false
-        },
-        {
-          id : CONFIG.PARAMETERNAMES.CLICKMOVE,
-          title : 'クリックで移動',
-          typeA : 'check',
-          defaultCheck : true
+          title : 'いつもNAVI',
+          href : 'itsumonavi'//'http://www.its-mo.com/map/top_z/{y2}_{x2}_{z}/'
         }
       ]
     },
-    {
-      title : 'ツール',
-      arrow : true,
-      childrenWidth:150,
-      children : [
-        {
-          id : 'sakuzu',
-          title : '作図・ファイル',
-          arrow : true
-        },
-        {
-          id : 'measure',
-          title : '計測',
-          arrow : true
-        },
-        {
-          id : 'gps',
-          title : '現在位置',
-          arrow : true,
-          checkCondition : function() { return GSI.GeoLocation.can; }
-        },
-        {
-          title : '共有',
-          arrow : true,
-          childrenWidth:200,
-          children : [
-            {
-              id : 'share_link',
-              title : 'リンクを取得',
-              arrow : true
-            },
-            {
-              id : 'share_builtin',
-              title : 'サイトに埋込',
-              arrow : true
-            },
-            {
-              id : 'share_file',
-              title : '名前を付けて一時保存',
-              arrow : true
-            }
-          ]
-        },
-        {
-          id : 'print',
-          title : '印刷',
-          arrow : true
-        },
-        {
-          title : '他のウェブ地図',
-          arrow : true,
-          childrenWidth:160,
-          children : [
-            {
-              title : 'Mapion',
-              href : 'mapion'//'http://www.mapion.co.jp/m/{y}_{x}_{z}/?wgs=1'
-            },
-            {
-              title : 'いつもNAVI',
-              href : 'itsumonavi'//'http://www.its-mo.com/map/top_z/{y2}_{x2}_{z}/'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title : '3D',
-      arrow : true,
-      href : 'gsi3d'//'http://cyberjapandata.gsi.go.jp/3d/site/index.html?z={z}&lat={y}&lon={x}'
-    }
+    {id : 'sakuzu', title : 'draw', arrow : true},
+    {id : 'gps', title : 'locate', arrow : true,
+      checkCondition : function() { return GSI.GeoLocation.can; }},
   ]
 };
 
@@ -436,27 +340,29 @@ CONFIG.BASETILES = [
     title : 'standard',
     url : 'http://{s}.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',
     subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
-    icon : 'image/map/tmb_bas_n.png',
+    icon : 'http://cyberjapandata.gsi.go.jp/xyz/std/18/232801/103215.png',
     "legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#std",
     errorTileUrl : 'image/map/no-data-std.png',
     minZoom : 2
   },
+	/*
   {
     id : 'pale',
     title : 'pale',
     url : 'http://{s}.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
     subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
-    icon : 'image/map/tmb_pal_n.png',
+    icon : 'http://cyberjapandata.gsi.go.jp/xyz/pale/18/232801/103215.png',
     "legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#pale",
     errorTileUrl : 'image/map/no-data-pale.png',
     minZoom : 2
   },
+	*/
   {
     id : 'blank',
     title : 'blank',
     url : 'http://{s}.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png',
     subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
-    icon : 'image/map/icon_white.png',
+    icon : 'http://cyberjapandata.gsi.go.jp/xyz/blank/8/228/98.png',
     "legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#blank",
     maxNativeZoom:14,
     errorTileUrl : 'image/map/no-data-blank.png',
@@ -467,7 +373,7 @@ CONFIG.BASETILES = [
     title : 'English',
     url : 'http://{s}.gsi.go.jp/xyz/english/{z}/{x}/{y}.png',
     subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
-    icon : 'image/map/jaise.png',
+    icon : 'http://cyberjapandata.gsi.go.jp/xyz/english/7/113/50.png',
     "legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#english",
     maxNativeZoom:11,
     errorTileUrl : 'image/map/no-data-english.png',
@@ -478,11 +384,17 @@ CONFIG.BASETILES = [
     title : 'photo',
     url : 'http://{s}.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg',
     subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
-    icon : 'image/map/djbmo.png',
+    icon : 'http://cyberjapandata.gsi.go.jp/xyz/ort/16/58274/25716.jpg',
     "legendUrl" : "http://maps.gsi.go.jp/development/ichiran.html#ort",
     errorTileUrl : 'image/map/no-data-ort.png',
     minZoom : 2
-  }
+  },
+	{
+		id: 'none',
+		title: 'none',
+		url: 'image/map/none.png',
+		icon: 'image/map/none.png'
+	}
 ];
 
 CONFIG.SERVERAPI = {};
@@ -667,7 +579,7 @@ function initialize() {
   {
     ( new GSI.Control.AccessCounter({url:CONFIG.SERVERAPI.ACCESSCOUNTER, refreshInterval:0}) ).addTo(GSI.GLOBALS.map);
   }
-  L.control.scale({imperial:false}).addTo(GSI.GLOBALS.map);
+  //L.control.scale({imperial:false}).addTo(GSI.GLOBALS.map);
 
   GSI.GLOBALS.mapLayerList = new GSI.MapLayerList( GSI.GLOBALS.map );
 
@@ -694,9 +606,10 @@ function initialize() {
     = { obj : new GSI.LatLngGrid( GSI.GLOBALS.map, { condition: CONFIG.LATLNGGRID.CONDITION,visible: viewSetting.latLngGrid, lineStyle:CONFIG.LATLNGGRIDSTYLE, labelClassName:CONFIG.LATLNGGRIDLABELCLASSNAME  } ), setter : 'setVisible', getter : 'getVisible' };
   GSI.GLOBALS.onoffObjects[ CONFIG.PARAMETERNAMES.UTMGRID ]
     = { obj : new GSI.UTM.Grid( GSI.GLOBALS.map,{ condition: CONFIG.UTMGRID.CONDITION,visible: viewSetting.utmGrid, lineStyle:CONFIG.UTMGRIDSTYLE, labelClassName:CONFIG.UTMGRIDLABELCLASSNAME} ), setter : 'setVisible', getter : 'getVisible' };
+		/*
   GSI.GLOBALS.onoffObjects[ CONFIG.PARAMETERNAMES.MINIMAP ]
     = { obj : new GSI.MiniMap( GSI.GLOBALS.map,{ visible: viewSetting.miniMap} ), setter : 'setVisible', getter : 'getVisible' };
-
+*/
   GSI.GLOBALS.onoffObjects[CONFIG.PARAMETERNAMES.HIGHQUALITY]
     = { obj : GSI.GLOBALS.baseLayer, setter : 'setHighQuality', getter : 'getHighQuality' };
 
@@ -803,20 +716,19 @@ function initialize() {
 
         break;
 
-      case 'share_file':
+//      case 'share_file':
       case 'share_link':
-      case 'share_builtin':
+//      case 'share_builtin':
       // 共有
         if (!GSI.GLOBALS.shareDialog) GSI.GLOBALS.shareDialog = new GSI.ShareDialog(
           GSI.GLOBALS.map, GSI.GLOBALS.pageStateManager, GSI.GLOBALS.layersJSON, GSI.GLOBALS.sakuzuList,
           { width:350, left : 'center', top: 45, effect : CONFIG.EFFECTS.DIALOG, resizable: false } );
         var mode = GSI.ShareDialog.MODE.LINK;
-        if ( id == 'share_file' ) mode = GSI.ShareDialog.MODE.FILE;
-        if ( id == 'share_builtin' ) mode = GSI.ShareDialog.MODE.BUILTIN;
+//        if ( id == 'share_file' ) mode = GSI.ShareDialog.MODE.FILE;
+//        if ( id == 'share_builtin' ) mode = GSI.ShareDialog.MODE.BUILTIN;
         GSI.GLOBALS.shareDialog.show(mode);
-
         break;
-
+/*
       case 'print':
       // 印刷
         if (!GSI.GLOBALS.pagePrinter) GSI.GLOBALS.pagePrinter =
@@ -831,12 +743,12 @@ function initialize() {
             } );
         GSI.GLOBALS.pagePrinter.show();
         break;
-
+*/
       }
     }
   });
   // ズームコントロール
-  GSI.GLOBALS.map.addControl(new L.Control.Zoom({position:"bottomright"}));
+  //GSI.GLOBALS.map.addControl(new L.Control.Zoom({position:"bottomright"}));
 
   // 表示中レイヤーダイアログ
   var left = 90;
@@ -1139,7 +1051,7 @@ GSI.PagePrinter = L.Class.extend( {
       zoomControl: false,
       attributionControl : false
     });
-    L.control.scale({imperial:false}).addTo(this._map);
+    // L.control.scale({imperial:false}).addTo(this._map);
 
     this._baseLayer = new GSI.BaseLayer(CONFIG.BASETILES, this._originalBaseLayer.getActiveId(), {
       errorTileUrl : 'image/map/no-data.png',
@@ -1563,11 +1475,11 @@ GSI.QueryParams = L.Class.extend( {
     baseMapSelector:{visible:true}
   },
   _viewSetting : {
-    centerCross : true,
+    centerCross : false,
     latLngGrid : false,
     utmGrid : false,
     jihokuLine : false,
-    miniMap : false
+    //miniMap : false
   },
   _layers : [],
   _currentPath : null,
@@ -10913,7 +10825,7 @@ GSI.ShareDialog = GSI.Dialog.extend( {
     var skips = {};
     skips[ CONFIG.PARAMETERNAMES.CLICKMOVE] = true;
     skips[ CONFIG.PARAMETERNAMES.COCOTILE] = true;
-    skips[ CONFIG.PARAMETERNAMES.MINIMAP] = true;
+    //skips[ CONFIG.PARAMETERNAMES.MINIMAP] = true;
 
     var visibles = {};
     visibles[ CONFIG.PARAMETERNAMES.CENTERCROSS] = this._centerCrossCheck.is( ':checked' );
@@ -14866,54 +14778,6 @@ GSI.LayersJSON = L.Class.extend( {
   _onLoadErrorExit : function() {}
 } );
 
-
-/************************************************************************
-
-GSI.MiniMap
-  MiniMap
-
-************************************************************************/
-
-GSI.MiniMap = L.Class.extend( {
-
-  initialize : function( map, options )
-  {
-    this.map = map;
-  },
-  setVisible : function( visible )
-  {
-    if ( visible )
-    {
-      this.show();
-    }
-    else
-    {
-      this.hide();
-    }
-  },
-  getVisible : function()
-  {
-    return ( this.miniMap  ? true : false );
-  },
-  show: function()
-  {
-    if ( !this.miniMap )
-    {
-      var baseLayer = L.tileLayer('http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' );
-      this.miniMap = new L.Control.MiniMap(baseLayer, { toggleDisplay: false }).addTo(this.map);
-    }
-  },
-  hide : function()
-  {
-    if ( this.miniMap  )
-    {
-      this.map.removeControl( this.miniMap );
-      this.miniMap = null;
-    }
-  }
-} );
-
-
 /************************************************************************
 
 GSI.COCOTileLayer
@@ -15400,33 +15264,16 @@ GSI.BaseLayerSelector = L.Class.extend( {
 
       var td = $("<td>" ).css( {"text-align":"center"} ).addClass( className );
       var div = $( '<div>' );
-      var a = $( '<a>' ).attr( { title:'背景地図を「' + this.tiles[i ].title+ '」に変更','href':'javascript:void(0);', "tileindex":i} );
+      var a = $( '<a>' ).attr({
+        title: this.tiles[i].title,href:'javascript:void(0);', tileindex:i} );
       var img = $( "<img>" )
         .css( { width:"60px", height:"60px"} )
-        .attr( { 'src' : this.tiles[i ].icon } );
-
-      var cx = $("<img>").css({"width":"16px","height":"16px","background":"#0022ee","position":"absolute","left":"1px","top":"1px","opacity":"1"})
-              .attr({ "src":"./image/map/i.png","title":"凡例・関連情報を表示" });
-      var a2 = $("<a>").css({"position":"absolute", "left":"1px","top":"1px"})
-            .html("　");
-      a2.append(cx);
+        .attr( { 'src' : this.tiles[i].icon } );
       div.css({'position':'relative'});
       a.append( img );
       div.append( a );
-
-      var timg=$("<img>").attr({ 'src' : './image/map/tmg'+i+'.png' })
-      .css({ 'position':'absolute','right':'1px','bottom':'0px','opacity':'1'});
-      a.append(timg);
-
-      if ( this.tiles[i].legendUrl && this.tiles[i].legendUrl != '' )
-      {
-        a2.attr( { 'href' : this.tiles[i].legendUrl, 'target' : '_blank' } );
-        div.append(a2);
-      }
-
       td.append( div );
       tr.append( td );
-
       a.click( L.bind( function(a){
         this.fire( "click",{activeIndex:a.attr( 'tileindex' )} );
       }, this, a ) );
@@ -15442,7 +15289,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
     tbody = $( "<tbody>" );
 
     // 透過率
-
+/*
     tr = $( "<tr>" );
 
     var td =$( '<td width="200">' );
@@ -15471,7 +15318,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
     tr.append (td);
 
     tbody.append( tr );
-
+*/
     // グレースケール
     if (
       ( !GSI.Utils.Browser.ie && !GSI.Utils.Browser.isAndroid )
@@ -15480,9 +15327,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
      )
     {
       tr = $( "<tr>" );
-
       var td =$( '<td colspan="2">' );
-
       var table2 = $( '<table>');
       var tbody2 = $( '<tbody>' );
       var tr2 = $( "<tr>" );
@@ -15490,7 +15335,7 @@ GSI.BaseLayerSelector = L.Class.extend( {
 
       var onOffSwitch  =new GSI.OnOffSwitch( {className:'onoff', checked:(this.baseLayer.getGrayScale())} );
 
-      var label = $( '<label for="' +  onOffSwitch.getId() + '"></label>' ).html( 'グレースケール' );
+      var label = $( '<label for="' +  onOffSwitch.getId() + '"></label>' ).html( 'grayscale' );
       td2.append( label );
       tr2.append( td2);
 

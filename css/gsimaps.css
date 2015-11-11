@@ -1,5 +1,5 @@
 * {
-  font-family: -apple-system,'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif; font-size:10.5pt;
+  font-family: -apple-system,'Lucida Grande', Meiryo, メイリオ, sans-serif; font-size:10.5pt;
 }
 strong {
   font-weight:normal;	color:#DD4827;
@@ -377,15 +377,10 @@ form {
   -webkit-border-radius: 4px;
   border-radius:4px;
   behavior: url(border-radius.htc);
-
-
-
-
 }
 #topmessage .message a
 {
 }
-
 #topmessage .closebtn
 {
   font-weight:bold;
