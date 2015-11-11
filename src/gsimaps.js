@@ -9,7 +9,9 @@ CONFIG.layers = [
   'http://maps.gsi.go.jp/layers_txt/layers2.txt',
   'http://maps.gsi.go.jp/layers_txt/layers3.txt',
   'http://maps.gsi.go.jp/layers_txt/layers4.txt',
-  'http://maps.gsi.go.jp/layers_txt/layers_experimental.txt'
+  'http://maps.gsi.go.jp/layers_txt/layers_experimental.txt',
+	'http://smellman.github.io/gsimaps/layers_txt/osm_layer.txt'//,
+	//'http://tmizu23.github.io/gsimaps/layers_txt/layers5.txt' // 利用条件！
 ];
 CONFIG.TOPMESSAGE = null;
 // 閉じた時のID != 現在のID または EXPIRES時間過ぎた場合にお知らせ復活
