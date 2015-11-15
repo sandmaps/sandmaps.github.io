@@ -339,132 +339,12 @@ form {
 .gsi_pageprinter .map_container
 {
   border :1px solid #333;
-
   margin: 0 0 2px 8px;
-
-
 }
 
 @media print { .no_print {display: none;} }
 
 /*
-#topmessage {
-  z-index:2;
-  padding: 1px 1px 1px 1px;
-  background:#333;
-
-  position:relative;
-
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 2px 1px  rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2x 1px  rgba(0, 0, 0, 0.2);
-}
-
-#topmessage .message {
-  color:#000;
-  padding-left:26px;
-  padding-right:16px;
-  line-height:28px;
-  vertical-align:middle;
-  background-color:#fff;
-  border:2px solid #555;
-
-  background-image: url(../image/system/info.png);
-  background-position:4px 5px;
-  background-repeat:no-repeat;
-
-  -moz-border-radius: 4px
-  -webkit-border-radius: 4px;
-  border-radius:4px;
-  behavior: url(border-radius.htc);
-}
-#topmessage .message a
-{
-}
-#topmessage .closebtn
-{
-  font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
-  *display: inline;
-  *zoom: 1;
-  position:absolute;
-  right:7px;
-  top : 6px;
-  color:#000;
-  line-height:24px;
-  padding-left: 6px;
-  padding-right: 6px;
-  vertical-align:middle;
-  text-align:center;
-}
-*/
-
-/*
-#header table {
-  border-collapse: collapse;
-}
-#header table td {
-  padding:2px;
-}
-
-#header #query{
-  background: #fff url(../image/system/search.png) no-repeat 6px 50%;
-  margin-top:1px;
-  height:30px;
-  line-height:30px;
-  border: 2px solid #555;
-  padding: 0px 0px 0px 28px;
-  width:100%;
-  *width:98%;
-  -webkit-border-top-left-radius: 15px;
-  -moz-border-radius-topleft: 15px;
-  border-top-left-radius: 15px;
-  -webkit-border-bottom-left-radius: 15px;
-  -moz-border-radius-bottomleft: 15px;
-  border-bottom-left-radius: 15px;
-
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  border-top-right-radius: 4px;
-
-  -webkit-border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  border-bottom-right-radius: 4px;
-
-
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-  behavior: url(border-radius.htc);
-
-  behavior: url(border-radius.htc);
-  vertical-align:middle;
-  box-sizing: border-box;
-     -webkit-box-sizing:border-box;
-     -moz-box-sizing: border-box;
-}
-#header .btn{
-  width:24px;
-  margin-top:1px;
-  height:24px;
-  padding:2px 2px 2px 2px;
-  background: -moz-linear-gradient(top, #ccc, #fff);
-  background: -webkit-linear-gradient(top, #ccc, #fff);
-  background: linear-gradient(#ccc, #fff);
-  background:#fff;
-  border: 1px solid #555;
-
-
-  cursor:pointer;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  behavior: url(border-radius.htc);
-
-}
-*/
-
 #search_result {
   color:#fff;
   z-index:10000;
@@ -472,26 +352,16 @@ form {
 
   background-color:#333;
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
+  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1);
   border: 1px solid #121212;
 
   display:none;
   padding:4px;
-
-
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   behavior: url(border-radius.htc);
-
-  /*
-  opacity: .80;
-  filter: alpha(opacity=80);
-  -ms-filter: "alpha(opacity=80)";
-  -khtml-opacity: .80;
-  -moz-opacity: .80;
-  */
 }
 
 
@@ -546,16 +416,9 @@ form {
 #search_result .frame{
   overflow: auto;
   max-height:400px;
-
-
-
-
 }
 
 #search_result .closebtn{
-  /*
-  border-left: 1px solid #333;
-  */
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -569,21 +432,6 @@ form {
   right: 0px;
   width: 28px;
   z-index:200;
-
-  /*
-  margin-right: -3px;
-  margin-top: -3px;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  behavior: url(border-radius.htc);
-
-  background-color:#666;
-
-
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#666666, direction=135, strength=10, enabled=true);
-  */
 }
 
 #search_result ul{
@@ -612,8 +460,8 @@ form {
   color: #2595C7;
   color:#000;
 }
-
-
+*/
+/*
 #footer {
   width:100%;
   position:absolute;
@@ -721,9 +569,10 @@ form {
 
 
   box-shadow: 0px -2px 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px -2px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: 0px -2px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
+  -moz-box-shadow: 0px -2px 1px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px -2px 1x 1px  rgba(0, 0, 0, 0.1);
 }
+*/
 
 .opacity_slider
 {
@@ -784,11 +633,6 @@ form {
   border-radius: 5px;
   behavior: url(border-radius.htc);
   min-height:0;
-  /*
-  -moz-box-shadow: 3px 3px 8px #888;
-  -webkit-box-shadow: 3px 3px 8px #888;
-  box-shadow: 3px 3px 8px #888;
-  */
 
 
   opacity: .90;
@@ -798,8 +642,8 @@ form {
   -moz-opacity: .90;
 
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
-  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
+  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3);
 
 }
 
@@ -913,8 +757,6 @@ form {
 
 }
 
-
-
 /* 地図メニュー
 ---------------------------------------------------------------------- */
 .menu_btn {
@@ -940,8 +782,8 @@ form {
   behavior: url(border-radius.htc);
 
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
-  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
+  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3);
 }
 
 .menu_btn.left {left:10px;}
@@ -962,8 +804,8 @@ form {
   list-style:none;
   padding:0;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3); /* Firefox */
-  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3); /* Chrome, Safari */
+  -moz-box-shadow: 0px 0px 2px 1px  rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 2x 1px  rgba(0, 0, 0, 0.3);
   margin:0;
   width:180px;
   border: 1px solid #222;
@@ -1079,25 +921,6 @@ form {
   right: 0px;
   width: 32px;
   z-index:200;
-  /*
-  margin-right: -1px;
-  margin-top: -1px;
-
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  behavior: url(border-radius.htc);
-
-  box-shadow: 2px 2px 3px #555;
-  -moz-box-shadow: 2px 2px 3px #555;
-  -webkit-box-shadow: 2px 2px 3x #555;
-
-  background-color:#fff;
-
-
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#666666, direction=135, strength=10, enabled=true);
-  */
   background:#333;
 }
 
@@ -1189,10 +1012,6 @@ form {
   background:url(../image/system/arrow_r.png) no-repeat right 50%;
 }
 
-
-
-
-
 /* 表示中レイヤー一覧
 ---------------------------------------------------------------------- */
 #visiblelistframe {
@@ -1201,8 +1020,8 @@ form {
   z-index:10000;
   background-color:#333;
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
+  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1);
   border: 1px solid #121212;
 
   top:90px;
@@ -1237,24 +1056,6 @@ form {
   width: 32px;
   z-index:200;
 
-  /*
-  margin-right: -1px;
-  margin-top: -1px;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  behavior: url(border-radius.htc);
-
-  box-shadow: 2px 2px 3px #555;
-  -moz-box-shadow: 2px 2px 3px #555;
-  -webkit-box-shadow: 2px 2px 3x #555;
-
-  background-color:#fff;
-
-
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#666666, direction=135, strength=10, enabled=true);
-  */
   background:#333;
 }
 
@@ -1323,10 +1124,10 @@ form {
   border: 1px solid #d8d8d8;
   padding: 4px;
   font-size:90%;
-  -moz-border-radius: 4px;/*for Firefox*/
-  -webkit-border-radius:4px;/*for Safari and chrome*/
+  -moz-border-radius: 4px;
+  -webkit-border-radius:4px;
   border-radius: 4px;
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
 
 }
 
@@ -1340,10 +1141,10 @@ form {
   padding:4px;
   background:#134A63;
   border: 1px solid #d8d8d8;
-  -moz-border-radius: 4px;/*for Firefox*/
-  -webkit-border-radius: 4px;/*for Safari and chrome*/
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
 }
 
 #visiblelist li a div{
@@ -1364,10 +1165,6 @@ form {
   text-align:center;
   vertical-align:middle;
 }
-
-
-
-
 
 .utmgrid_label
 {
@@ -1413,41 +1210,33 @@ form {
   top : 100px;
   border: 3px solid #333;
   background:#fff;
-  -moz-border-radius: 6px;/*for Firefox*/
-  -webkit-border-radius: 6px;/*for Safari and chrome*/
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
 
-
-
-
-  behavior: url(border-radius.htc);/*for IE*/
+  behavior: url(border-radius.htc);
   padding: 1px;
 
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1); /* Firefox */
-  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1); /* Chrome, Safari */
+  -moz-box-shadow: 2px 2px 1px 1px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 1x 1px  rgba(0, 0, 0, 0.1);
   width: 320px;
-
-
 }
 
 .gsi_dialog:after {
-  content: ".";  /* 新しい要素を作る */
-  display: block;  /* ブロックレベル要素に */
+  content: ".";
+  display: block;
   clear: both;
   height: 0;
   visibility: hidden;
 }
 
-
 .gsi_dialog_header {
   color: #fff;
   background:#333;
-  -moz-border-radius: 3px;/*for Firefox*/
-  -webkit-border-radius: 3px;/*for Safari and chrome*/
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-
-
 
   behavior: url(border-radius.htc);/*for IE*/
   font-size:90%;
