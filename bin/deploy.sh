@@ -18,6 +18,7 @@ rm -rf .git
 rm -r .gitignore
 
 echo ".bowerrc
+.editorconfig
 .travis.yml
 bin
 bower.json
