@@ -25,5 +25,5 @@ gulp.task( 'default', [ 'minify' ], function () {
 } );
 
 gulp.task('test', function() {
-    return qunit( './tests.html' );
+    return qunit( './tests/tests.html' );
 });
